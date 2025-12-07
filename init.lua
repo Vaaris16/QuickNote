@@ -2,4 +2,4 @@ function Init()
     print("first test")
 end
 
-return Init()
+vim.api.nvim_create_user_command("Qn", Init())

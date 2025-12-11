@@ -1,6 +1,6 @@
 local M = {}
 
-function M.open_file(pathFile)
+function M.open_note(pathFile)
     vim.cmd("vsplit " .. pathFile)
 
     vim.cmd("vertical resize 40")

@@ -1,5 +1,9 @@
-function Init()
-    print("first test")
-end
+local setup = require("utils.setup")
 
-vim.api.nvim_create_user_command("Qn", Init, {})
+local notes = require("utils.open_notes")
+
+setup.setup()
+
+vim.api.nvim_create_user_command("Qn", function()
+    notes.open_note(setup.pathFile)
+end, {})
